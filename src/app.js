@@ -1,26 +1,20 @@
 import express from "express"
+import articlesRouter from "./routes/articlesRoute.js"
 
-import { articles } from "./db/articles.js"
-
+import cors from "cors"
 
 const app = express()
 
+
+app.use(cors)
+
+app.use(express.json())
+app.use("/articles", articlesRouter)
+
 app.get("/", (req, res) => {
-    res.json("оберiть маршрут")
+    res.json("оберіть маршрут")
 })
 
-
-app.get("/articles", (req, res) => {
-    res.json(articles)
-})
-
-app.get("/articles/:id", (req, res) => {
-    const id = Number(req.params.id)
-    const article = articles.find((article) => article.id === id)
-    res.json(id)
-})
-
-
-app.listen(3000, () => {
-    console.log("Сервер запущений")
+app.listen(1487, () => {
+    console.log("localhost:1487")
 })

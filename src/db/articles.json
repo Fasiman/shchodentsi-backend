@@ -1,5 +1,5 @@
-export const articles = [
-    {
+[
+  {
     "id": 1,
     "db_article_id": "art_68498236a100312bea001fe6",
     "img": "https://ftp.goit.study/img/habits/68498236a100312bea001fe6.webp",
@@ -14,7 +14,7 @@ export const articles = [
     "date": "2025-07-27",
     "createdAt": "2025-07-27T00:00:00Z"
   },
-   {
+  {
     "id": 2,
     "db_article_id": "art_68498236a100312bea002fe6",
     "img": "https://ftp.goit.study/img/habits/68498236a100312bea002fe6.webp",
@@ -28,5 +28,5 @@ export const articles = [
     "avatar": "",
     "date": "2025-07-27",
     "createdAt": "2025-07-27T00:00:00Z"
-  },
+  }
 ]
