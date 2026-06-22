@@ -1,15 +1,17 @@
 import express from "express"
 import articlesRouter from "./routes/articlesRoute.js"
+import usersRouter from "./routes/userRoute.js"
 
 import cors from "cors"
 
 const app = express()
 
 
-app.use(cors)
+app.use(cors())
 
 app.use(express.json())
 app.use("/articles", articlesRouter)
+app.use("/user", usersRouter)
 
 app.get("/", (req, res) => {
     res.json("оберіть маршрут")
